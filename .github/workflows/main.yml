@@ -44,7 +44,7 @@ jobs:
           sudo rm -rf /usr/share/dotnet /etc/mysql /etc/php /etc/apt/sources.list.d /usr/local/lib/android
           sudo -E apt-get -y purge azure-cli ghc* zulu* hhvm llvm* firefox google* dotnet* powershell openjdk* adoptopenjdk* mysql* php* mongodb* dotnet* moby* snapd* || true
           sudo -E apt-get update
-          sudo -E apt-get -y install build-essential clang flex g++ gawk gcc-multilib gettext git libncurses5-dev libssl-dev python3-distutils rsync unzip zlib1g-dev file wget asciidoc binutils bzip2 util-linux help2man intltool libelf-dev make patch perl-modules python3-dev xsltproc qemu-utils
+          sudo -E apt-get -y install build-essential clang flex g++ gawk gcc-multilib gettext git libncurses5-dev libssl-dev python3-distutils rsync unzip zlib1g-dev file wget asciidoc binutils bzip2 util-linux help2man intltool libelf-dev make patch perl-modules python3-dev python3-pyelftools xsltproc qemu-utils
           sudo -E apt-get -y autoremove --purge
           sudo -E apt-get clean
           df -h          
@@ -55,9 +55,6 @@ jobs:
           # echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
           ./scripts/feeds update -a
           ./scripts/feeds install -a 
-      - name: install prepare
-        run: |
-          sudo apt-get install python-pyelftools python3-pyelftools -y
         
       - name: Generate configuration file
         run: |
