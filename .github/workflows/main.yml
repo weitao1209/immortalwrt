@@ -69,7 +69,7 @@ jobs:
           CONFIG_TARGET_x86=y
           CONFIG_TARGET_x86_64=y
           CONFIG_TARGET_x86_64_DEVICE_generic=y
-          CONFIG_VMDK_IMAGES=y
+          #CONFIG_VMDK_IMAGES=y
           CONFIG_LUCI_LANG_en=y
           CONFIG_LUCI_LANG_zh_Hans=y
           CONFIG_PACKAGE_luci=y
