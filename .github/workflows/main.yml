@@ -54,12 +54,16 @@ jobs:
           # sed -i 's/#src-git helloworld/src-git helloworld/g' ./feeds.conf.default
           # echo "src-git helloworld https://github.com/fw876/helloworld.git" >> "feeds.conf.default"
           ./scripts/feeds update -a
-          ./scripts/feeds install -a          
-
+          ./scripts/feeds install -a 
+      - name: install prepare
+        run: |
+          sudo apt-get install python-pyelftools python3-pyelftools -y
+        
       - name: Generate configuration file
         run: |
           rm -f ./.config*
           touch ./.config
+          
 
           #
           # 在 cat >> .config <<EOF 到 EOF 之间粘贴你的编译配置, 需注意缩进关系
