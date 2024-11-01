@@ -66,9 +66,12 @@ jobs:
           # 例如:
 
           cat >> .config <<EOF
-          CONFIG_TARGET_x86=y
-          CONFIG_TARGET_x86_64=y
-          CONFIG_TARGET_x86_64_DEVICE_generic=y
+          #CONFIG_TARGET_x86=y
+          #CONFIG_TARGET_x86_64=y
+          #CONFIG_TARGET_x86_64_DEVICE_generic=y
+          CONFIG_TARGET_rockchip=y
+          CONFIG_TARGET_rockchip_armv8=y
+          CONFIG_TARGET_DEVICE_rockchip_armv8_DEVICE_friendlyarm_nanopi-r5s=y
           #CONFIG_VMDK_IMAGES=y
           CONFIG_LUCI_LANG_en=y
           CONFIG_LUCI_LANG_zh_Hans=y
