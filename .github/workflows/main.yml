@@ -12,7 +12,7 @@ name: OpenWrt-CI
 on:
   push:
     branches: 
-      - openwrt-21.02
+      - openwrt-23.05
   # schedule:
   #   - cron: 0 20 * * *
   workflow_dispatch:
@@ -34,7 +34,7 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v3
         with:
-          ref: openwrt-21.02
+          ref: openwrt-23.05
 
       - name: Space cleanup
         env:
