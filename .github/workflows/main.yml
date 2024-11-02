@@ -120,6 +120,7 @@ jobs:
           CONFIG_PACKAGE_odhcpd-ipv6only=y
           CONFIG_PACKAGE_odhcp6c=y
           CONFIG_PACKAGE_6in4=y
+          CONFIG_PACKAGE_rtp2httpd=y
           EOF
 
           #
